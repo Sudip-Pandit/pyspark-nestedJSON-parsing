@@ -8,7 +8,7 @@ from pyspark.sql.functions import *
  
  spark = SparkSession.builder.getOrCreate()
  
- df = Spark.read.format("json").option("multiline", "true").load
+ df = Spark.read.format("json").option("multiline", "true").load("file:///D:/data/complex.Json")
 
 #Flatten array of structs and structs
 
