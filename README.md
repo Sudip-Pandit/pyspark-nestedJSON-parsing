@@ -4,7 +4,11 @@ from pyspark.sql.types import *
 
 from pyspark.sql.functions import *
 
+ from pyspark.sql import SParkSession
  
+ spark = SparkSession.builder.getOrCreate()
+ 
+ df = Spark.read.format("json").option("multiline", "true").load
 
 #Flatten array of structs and structs
 
